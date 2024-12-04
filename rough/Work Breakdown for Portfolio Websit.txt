@@ -26,7 +26,7 @@ Header: Sticky header with navigation links, scroll progress bar, and resume dow
 Footer: Social media links with hover animations.
 Task 2.3: Background effects.
 
-Add particle animations for the background using react-tsparticles.
+Add particle animations for the background.
 Include parallax scrolling effects for multi-layered depth.
 3. Homepage Development
 Task 3.1: Hero section.

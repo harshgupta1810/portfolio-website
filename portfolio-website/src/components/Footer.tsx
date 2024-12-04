@@ -1,7 +1,7 @@
 export default function Footer() {
     const socialLinks = [
-      { href: 'https://github.com', label: 'GitHub' },
-      { href: 'https://linkedin.com', label: 'LinkedIn' },
+      { href: 'https://github.com/harshgupta1810', label: 'GitHub' },
+      { href: 'https://www.linkedin.com/in/harsh-gupta-52465a204/', label: 'LinkedIn' },
       { href: 'https://twitter.com', label: 'Twitter' },
     ];
   
