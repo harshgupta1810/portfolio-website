@@ -1,0 +1,15 @@
+str-
+.
+├── public
+├── src
+│   ├── App.jsx
+│   ├── components
+│   ├── hooks
+│   ├── pages
+│   ├── styles
+│   │   └── globals.css
+│   └── utils
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+└── README.md
