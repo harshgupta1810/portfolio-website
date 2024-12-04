@@ -36,15 +36,7 @@ three.js for 3D visualizations.
 Utilities:
 axios for API calls (if required).
 eslint and prettier for code quality.
-File Structure Setup:
 
-Follow a modular structure:
-/components: Reusable components (e.g., Header, Footer, Cards).
-/pages: Page-specific components.
-/styles: Global styles and Tailwind configuration.
-/public: Static assets like images, icons, and fonts.
-/data: JSON/Markdown files for dynamic content like blogs or projects.
-/hooks: Custom React hooks (if necessary).
 Tailwind CSS Configuration:
 
 Customize the tailwind.config.js to include:
