@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom utility classes */
 :root {
-  --background: #0D1117;
-  --foreground: #EAEAEA;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #EAEAEA;
-    --foreground: #0D1117;
-  }
+  --color-background: #0D1117;
+  --color-text: #EAEAEA;
+  --color-primary: #00A8E1;
+  --color-secondary: #FF1654;
+  --color-highlight: #F9ED69;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
+}
+
+.dark-mode {
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
