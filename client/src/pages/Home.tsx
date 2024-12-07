@@ -6,6 +6,8 @@ import { StatsCard } from "@/components/StatsCard"
 import { ProjectCarousel } from "@/components/ProjectCarousel"
 import { motion } from "framer-motion"
 import { AnimatedButton } from "@/components/AnimatedButton"
+import { downloadResume } from "@/api/resume"
+import { useToast } from "@/hooks/useToast"
 
 const stats = [
   { label: "Projects Completed", value: "32+" },
@@ -30,9 +32,26 @@ const strengths = [
 ]
 
 export function Home() {
-  const handleDownloadResume = () => {
-    // Mock function - would typically download a PDF
-    console.log("Downloading resume...")
+  const { toast } = useToast()
+  const [isDownloading, setIsDownloading] = useState(false)
+
+  const handleDownloadResume = async () => {
+    try {
+      setIsDownloading(true)
+      await downloadResume()
+      toast({
+        title: "Success",
+        description: "Resume downloaded successfully",
+      })
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to download resume. Please try again.",
+      })
+    } finally {
+      setIsDownloading(false)
+    }
   }
 
   return (
@@ -55,9 +74,12 @@ export function Home() {
               }}
             />
           </div>
-          <AnimatedButton onClick={handleDownloadResume}>
+          <AnimatedButton 
+            onClick={handleDownloadResume}
+            disabled={isDownloading}
+          >
             <Download className="mr-2 h-4 w-4" />
-            Download Resume
+            {isDownloading ? "Downloading..." : "Download Resume"}
           </AnimatedButton>
         </div>
       </section>

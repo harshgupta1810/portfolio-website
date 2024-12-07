@@ -32,7 +32,7 @@ function Nodes() {
       opacity: number
     }[] = []
 
-    const numNodes = 100
+    const numNodes = 50 // Reduced from 100 to improve performance
 
     for (let i = 0; i < numNodes; i++) {
       const x = (Math.random() - 0.5) * 10
@@ -58,7 +58,7 @@ function Nodes() {
       })
 
       if (i > 0) {
-        const nearestNodes = findNearestNodes(position, nodesArray.slice(0, i), 3)
+        const nearestNodes = findNearestNodes(position, nodesArray.slice(0, i), 2) // Reduced from 3 to 2
         nearestNodes.forEach((nearNode) => {
           connectionsArray.push({
             from: position,
@@ -78,8 +78,8 @@ function Nodes() {
       const time = state.clock.getElapsedTime()
       const mouseX = state.mouse.x * 0.1
       const mouseY = state.mouse.y * 0.1
-      groupRef.current.rotation.x += 0.002 + mouseY * 0.01
-      groupRef.current.rotation.y += 0.003 + mouseX * 0.01
+      groupRef.current.rotation.x += 0.001 + mouseY * 0.005 // Reduced rotation speed
+      groupRef.current.rotation.y += 0.002 + mouseX * 0.005
     }
   })
 
@@ -87,6 +87,17 @@ function Nodes() {
     if (groupRef.current) {
       groupRef.current.rotation.x = 0.4
       groupRef.current.rotation.y = 0.2
+    }
+
+    return () => {
+      // Cleanup materials and geometries
+      nodes.forEach((node) => {
+        if (node.position) node.position.set(0, 0, 0)
+      })
+      connections.forEach((connection) => {
+        if (connection.from) connection.from.set(0, 0, 0)
+        if (connection.to) connection.to.set(0, 0, 0)
+      })
     }
   }, [])
 
@@ -110,7 +121,7 @@ function Nodes() {
     }
   }, [])
 
-  const sphereGeometry = useMemo(() => new THREE.SphereGeometry(0.05, 16, 16), [])
+  const sphereGeometry = useMemo(() => new THREE.SphereGeometry(0.05, 12, 12), []) // Reduced segments
   const lineMaterial = useMemo(
     () =>
       new THREE.LineBasicMaterial({
@@ -170,11 +181,11 @@ export function ThreeScene() {
         camera={{ position: [0, 0, 10], fov: 60 }}
         gl={{
           antialias: true,
-          powerPreference: "high-performance",
           alpha: true,
+          powerPreference: "default", // Changed from high-performance
           stencil: false,
           depth: true,
-          preserveDrawingBuffer: true,
+          preserveDrawingBuffer: false, // Changed from true
         }}
         onCreated={({ gl }) => {
           gl.setClearColor(new THREE.Color('#0D1117'), 0)
@@ -188,16 +199,16 @@ export function ThreeScene() {
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          rotateSpeed={0.5}
+          rotateSpeed={0.3} // Reduced from 0.5
           maxPolarAngle={Math.PI / 1.5}
           minPolarAngle={Math.PI / 3}
         />
         <EffectComposer>
           <Bloom
-            intensity={1.5}
+            intensity={1}
             luminanceThreshold={0.2}
             luminanceSmoothing={0.9}
-            height={300}
+            height={200} // Reduced from 300
           />
         </EffectComposer>
       </Canvas>
