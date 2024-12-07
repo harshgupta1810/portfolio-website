@@ -9,11 +9,6 @@ const authRoutes = require("./routes/auth");
 const { authenticateWithToken } = require('./routes/middleware/auth');
 const cors = require("cors");
 
-if (!process.env.DATABASE_URL || !process.env.SESSION_SECRET) {
-  console.error("Error: DATABASE_URL or SESSION_SECRET variables in .env missing.");
-  process.exit(-1);
-}
-
 const app = express();
 const port = process.env.PORT || 3000;
 // Pretty-print JSON responses
@@ -29,41 +24,41 @@ app.use(cors());
 app.use(authenticateWithToken);
 app.use(authRoutes);
 
-// Database connection with retry logic
-const connectWithRetry = () => {
-  const options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 5000,
-    socketTimeoutMS: 45000,
+// Database connection with retry logic (only if DATABASE_URL is provided)
+if (process.env.DATABASE_URL) {
+  const connectWithRetry = () => {
+    mongoose
+      .connect(process.env.DATABASE_URL)
+      .then(() => {
+        console.log("Database connected successfully");
+      })
+      .catch((err) => {
+        console.error(`Database connection error: ${err.message}`);
+        console.log('Retrying connection in 5 seconds...');
+        setTimeout(connectWithRetry, 5000);
+      });
   };
 
-  mongoose
-    .connect(process.env.DATABASE_URL, options)
-    .then(() => {
-      console.log("Database connected successfully");
-    })
-    .catch((err) => {
-      console.error(`Database connection error: ${err.message}`);
-      console.log('Retrying connection in 5 seconds...');
-      setTimeout(connectWithRetry, 5000);
-    });
+  connectWithRetry();
+} else {
+  console.log("No DATABASE_URL provided, running without database");
+}
+
+// Session configuration - use in-memory store if no database connection
+const sessionConfig = {
+  secret: process.env.SESSION_SECRET || 'fallback-secret-key',
+  resave: false,
+  saveUninitialized: false,
 };
 
-connectWithRetry();
+if (process.env.DATABASE_URL) {
+  sessionConfig.store = MongoStore.create({
+    mongoUrl: process.env.DATABASE_URL,
+    touchAfter: 24 * 3600 // time period in seconds
+  });
+}
 
-// Session configuration with connect-mongo
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({ 
-      mongoUrl: process.env.DATABASE_URL,
-      touchAfter: 24 * 3600 // time period in seconds
-    }),
-  }),
-);
+app.use(session(sessionConfig));
 
 app.on("error", (error) => {
   console.error(`Server error: ${error.message}`);
