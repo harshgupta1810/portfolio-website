@@ -11,6 +11,7 @@ import {
   Lightbulb,
   Share2,
 } from "lucide-react"
+import profileImage from "/profile.jpg"
 
 const interests = [
   {
@@ -61,7 +62,7 @@ export function About() {
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse" />
           <img
-            src="https://via.placeholder.com/160"
+            src={profileImage}
             alt="Profile"
             className="relative rounded-full w-full h-full object-cover border-4 border-background"
           />

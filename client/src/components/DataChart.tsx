@@ -7,7 +7,7 @@ const data = [
   { subject: "Deep Learning", A: 80 },
   { subject: "Data Analysis", A: 88 },
   { subject: "MLOps", A: 75 },
-  { subject: "Cloud Computing", A: 82 },
+  { subject: "Data Science", A: 82 },
 ]
 
 export function DataChart() {
@@ -20,8 +20,8 @@ export function DataChart() {
     >
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid 
-            stroke="hsl(var(--primary))" 
+          <PolarGrid
+            stroke="hsl(var(--primary))"
             strokeOpacity={0.2}
           />
           <PolarAngleAxis
