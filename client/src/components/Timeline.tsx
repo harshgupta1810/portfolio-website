@@ -9,22 +9,22 @@ import {
 
 const timelineEvents = [
   {
-    year: "2024",
+    year: "July 2024 - Present",
     title: "AI Developer",
     company: "Deotech Solutions",
     description: "Leading AI/ML projects and developing innovative solutions",
   },
   {
-    year: "2023",
+    year: "Nov 2023 - Jan 2024",
     title: "Research Paper Publication",
     company: "International Journal of Scientific Research",
     description: "Published research on Forecasting Commodity Prices using Machine Learning",
   },
   {
-    year: "2022",
-    title: "Master's Degree",
-    company: "Top University",
-    description: "Completed Master's in Computer Science with focus on AI/ML",
+    year: "Aug 2020 - June 2024",
+    title: "B.Tech Degree",
+    company: "Presidency University",
+    description: "Completed bachelor's in Computer Science",
   },
 ]
 

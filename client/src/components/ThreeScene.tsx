@@ -16,8 +16,7 @@ const colors = {
 
 function Nodes() {
   const groupRef = useRef<THREE.Group>(null)
-  
-  // Create nodes with memoization to prevent recreation on each render
+
   const { nodes, connections } = useMemo(() => {
     const nodesArray: {
       position: THREE.Vector3
@@ -32,17 +31,15 @@ function Nodes() {
       color: THREE.Color
       opacity: number
     }[] = []
-    
+
     const numNodes = 100
 
-    // Create nodes
     for (let i = 0; i < numNodes; i++) {
       const x = (Math.random() - 0.5) * 10
       const y = (Math.random() - 0.5) * 10
       const z = (Math.random() - 0.5) * 10
       const position = new THREE.Vector3(x, y, z)
 
-      // Assign node type
       let type: 'primary' | 'secondary' | 'highlight'
       if (i < numNodes * 0.4) {
         type = 'primary'
@@ -60,7 +57,6 @@ function Nodes() {
         glowIntensity: 0.5,
       })
 
-      // Create connections
       if (i > 0) {
         const nearestNodes = findNearestNodes(position, nodesArray.slice(0, i), 3)
         nearestNodes.forEach((nearNode) => {
@@ -77,12 +73,9 @@ function Nodes() {
     return { nodes: nodesArray, connections: connectionsArray }
   }, [])
 
-  // Animation loop
   useFrame((state) => {
     if (groupRef.current) {
       const time = state.clock.getElapsedTime()
-
-      // Rotate based on mouse position
       const mouseX = state.mouse.x * 0.1
       const mouseY = state.mouse.y * 0.1
       groupRef.current.rotation.x += 0.002 + mouseY * 0.01
@@ -130,7 +123,6 @@ function Nodes() {
 
   return (
     <group ref={groupRef}>
-      {/* Nodes */}
       {nodes.map((node, i) => (
         <mesh
           key={`node-${i}`}
@@ -141,7 +133,6 @@ function Nodes() {
         />
       ))}
 
-      {/* Connections */}
       {connections.map((connection, i) => {
         const points = [connection.from, connection.to]
         return (
@@ -175,9 +166,18 @@ export function ThreeScene() {
     <div className="absolute inset-0">
       <Canvas
         camera={{ position: [0, 0, 10], fov: 60 }}
-        gl={{ antialias: true }}
+        gl={{ 
+          antialias: true,
+          powerPreference: "high-performance",
+          alpha: true,
+          stencil: false,
+          depth: true,
+          preserveDrawingBuffer: true,
+        }}
+        onCreated={({ gl }) => {
+          gl.setClearColor(new THREE.Color('#0D1117'), 0)
+        }}
       >
-        <color attach="background" args={['#0D1117']} />
         <fog attach="fog" args={['#0D1117', 5, 25]} />
         <ambientLight intensity={0.5} />
         <pointLight position={[5, 5, 5]} color="#00A8E1" intensity={0.5} />

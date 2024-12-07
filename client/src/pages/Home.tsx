@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react"
 import Typewriter from "typewriter-effect"
-import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import { ThreeScene } from "@/components/ThreeScene"
 import { StatsCard } from "@/components/StatsCard"
 import { ProjectCarousel } from "@/components/ProjectCarousel"
 import { motion } from "framer-motion"
+import { AnimatedButton } from "@/components/AnimatedButton"
 
 const stats = [
   { label: "Projects Completed", value: "32+" },
@@ -55,14 +55,10 @@ export function Home() {
               }}
             />
           </div>
-          <Button
-            size="lg"
-            className="animate-pulse hover:animate-none"
-            onClick={handleDownloadResume}
-          >
+          <AnimatedButton onClick={handleDownloadResume}>
             <Download className="mr-2 h-4 w-4" />
             Download Resume
-          </Button>
+          </AnimatedButton>
         </div>
       </section>
 
@@ -128,9 +124,9 @@ export function Home() {
         <h2 className="text-3xl font-bold">
           Ready to turn your ideas into reality? Let's collaborate!
         </h2>
-        <Button size="lg" asChild>
+        <AnimatedButton variant="outline" asChild>
           <a href="/contact">Contact Me</a>
-        </Button>
+        </AnimatedButton>
       </section>
     </div>
   )
