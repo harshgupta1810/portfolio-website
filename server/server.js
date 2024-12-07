@@ -29,17 +29,28 @@ app.use(cors());
 app.use(authenticateWithToken);
 app.use(authRoutes);
 
-// Database connection
-mongoose
-  .connect(process.env.DATABASE_URL)
-  .then(() => {
-    console.log("Database connected successfully");
-  })
-  .catch((err) => {
-    console.error(`Database connection error: ${err.message}`);
-    console.error(err.stack);
-    process.exit(1);
-  });
+// Database connection with retry logic
+const connectWithRetry = () => {
+  const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000,
+    socketTimeoutMS: 45000,
+  };
+
+  mongoose
+    .connect(process.env.DATABASE_URL, options)
+    .then(() => {
+      console.log("Database connected successfully");
+    })
+    .catch((err) => {
+      console.error(`Database connection error: ${err.message}`);
+      console.log('Retrying connection in 5 seconds...');
+      setTimeout(connectWithRetry, 5000);
+    });
+};
+
+connectWithRetry();
 
 // Session configuration with connect-mongo
 app.use(
@@ -47,7 +58,10 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+    store: MongoStore.create({ 
+      mongoUrl: process.env.DATABASE_URL,
+      touchAfter: 24 * 3600 // time period in seconds
+    }),
   }),
 );
 
