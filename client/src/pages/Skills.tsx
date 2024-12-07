@@ -1,10 +1,8 @@
 import { motion } from "framer-motion"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { SkillCategory } from "@/components/SkillCategory"
 import { SkillRadar } from "@/components/SkillRadar"
 import { AdditionalSkills } from "@/components/AdditionalSkills"
-import { Button } from "@/components/ui/button"
 import { Mail } from "lucide-react"
 
 const skillCategories = [
@@ -62,34 +60,54 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <div className="space-y-20">
-      {/* Introduction */}
-      <section className="text-center space-y-4">
-        <motion.h1
-          className="text-4xl font-bold"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="space-y-16"
+    >
+      {/* Hero Section */}
+      <section className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg -z-10" />
+        <div className="relative py-12 px-6 text-center space-y-4">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
+          >
+            Skills & Expertise
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+          >
+            With extensive experience in AI, Machine Learning, and Data Science,
+            I bring a comprehensive skill set to solve complex technical challenges
+            and deliver innovative solutions.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Skills Radar Chart */}
+      <section className="space-y-8">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="bg-card p-6 rounded-lg border backdrop-blur-sm"
         >
-          Skills & Expertise
-        </motion.h1>
-        <motion.p
-          className="text-lg text-muted-foreground max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          With a strong foundation in AI, Machine Learning, and Data Science, I bring a comprehensive
-          skill set to tackle complex technical challenges and deliver innovative solutions.
-        </motion.p>
+          <SkillRadar />
+        </motion.div>
       </section>
 
       {/* Skill Categories */}
-      <section className="space-y-12">
+      <section className="space-y-8">
         {skillCategories.map((category, index) => (
           <motion.div
             key={category.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}
           >
             <SkillCategory title={category.title} skills={category.skills} />
@@ -97,34 +115,54 @@ export function Skills() {
         ))}
       </section>
 
-      {/* Skill Proficiency */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-center">Skill Proficiency</h2>
-        <Card className="p-6">
-          <SkillRadar />
-        </Card>
-      </section>
-
       {/* Additional Skills */}
       <section className="space-y-8">
-        <h2 className="text-3xl font-bold text-center">Additional Skills</h2>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          className="text-3xl font-bold text-center"
+        >
+          Additional Expertise
+        </motion.h2>
         <AdditionalSkills />
       </section>
 
       {/* Call to Action */}
-      <section className="text-center space-y-6">
-        <h2 className="text-3xl font-bold">Let's Work Together</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Interested in collaborating or learning more about my experience? Let's connect and discuss
-          how I can contribute to your next project.
-        </p>
-        <Button size="lg" asChild>
-          <a href="/contact">
-            <Mail className="mr-2 h-4 w-4" />
-            Get in Touch
-          </a>
-        </Button>
+      <section className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg -z-10" />
+        <div className="relative py-12 px-6 text-center space-y-6">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-3xl font-bold"
+          >
+            Let's Work Together
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
+          >
+            Interested in collaborating or learning more about my experience?
+            Let's connect and discuss how I can contribute to your next project.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+              asChild
+            >
+              <a href="/contact">
+                <Mail className="mr-2 h-4 w-4" />
+                Get in Touch
+              </a>
+            </Button>
+          </motion.div>
+        </div>
       </section>
-    </div>
+    </motion.div>
   )
 }

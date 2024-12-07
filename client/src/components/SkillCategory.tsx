@@ -9,11 +9,11 @@ interface SkillCategoryProps {
 
 export function SkillCategory({ title, skills }: SkillCategoryProps) {
   return (
-    <Card className="hover:shadow-lg transition-shadow">
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
+    <Card className="overflow-hidden backdrop-blur-sm border bg-card/50">
+      <CardHeader className="bg-gradient-to-r from-primary/10 to-secondary/10">
+        <CardTitle className="text-xl font-semibold">{title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-6">
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, index) => (
             <motion.div
@@ -23,8 +23,8 @@ export function SkillCategory({ title, skills }: SkillCategoryProps) {
               transition={{ delay: index * 0.05 }}
             >
               <Badge
-                className="cursor-pointer transition-colors"
-                variant="secondary"
+                className="text-sm font-medium px-4 py-1.5 bg-background hover:bg-background/90 text-foreground border border-primary/20 shadow-sm transition-all duration-300 hover:scale-105 hover:border-primary/50"
+                variant="outline"
               >
                 {skill}
               </Badge>

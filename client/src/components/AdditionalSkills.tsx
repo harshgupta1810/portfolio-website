@@ -54,10 +54,10 @@ export function AdditionalSkills() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
           >
-            <Card className="h-full hover:shadow-lg transition-shadow">
-              <CardContent className="pt-6">
+            <Card className="h-full hover:shadow-lg transition-shadow backdrop-blur-sm border bg-card/50">
+              <CardContent className="p-6">
                 <div className="flex items-center gap-4">
-                  <div className="p-2 rounded-lg bg-primary/10">
+                  <div className="p-3 rounded-lg bg-gradient-to-r from-primary/20 to-secondary/20">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
