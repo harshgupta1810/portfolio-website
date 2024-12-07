@@ -134,12 +134,14 @@ function Nodes() {
       ))}
 
       {connections.map((connection, i) => {
-        const points = [connection.from, connection.to]
+        const geometry = new THREE.BufferGeometry().setFromPoints([
+          connection.from,
+          connection.to
+        ])
         return (
-          <line
+          <primitive
             key={`connection-${i}`}
-            geometry={new THREE.BufferGeometry().setFromPoints(points)}
-            material={lineMaterial}
+            object={new THREE.Line(geometry, lineMaterial)}
           />
         )
       })}
@@ -166,7 +168,7 @@ export function ThreeScene() {
     <div className="absolute inset-0">
       <Canvas
         camera={{ position: [0, 0, 10], fov: 60 }}
-        gl={{ 
+        gl={{
           antialias: true,
           powerPreference: "high-performance",
           alpha: true,
