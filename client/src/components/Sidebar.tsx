@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom"
 import { cn } from "@/lib/utils"
-import { 
+import { ThemeToggle } from "./ui/theme-toggle"
+import {
   Home,
   User,
   Briefcase,
@@ -59,21 +60,26 @@ export function Sidebar() {
             })}
           </nav>
         </div>
-        <div className="flex justify-center gap-4">
-          {socialLinks.map((link) => {
-            const Icon = link.icon
-            return (
-              <a
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Icon className="h-5 w-5" />
-              </a>
-            )
-          })}
+        <div className="space-y-4">
+          <div className="flex justify-center">
+            <ThemeToggle />
+          </div>
+          <div className="flex justify-center gap-4">
+            {socialLinks.map((link) => {
+              const Icon = link.icon
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              )
+            })}
+          </div>
         </div>
       </div>
     </aside>
