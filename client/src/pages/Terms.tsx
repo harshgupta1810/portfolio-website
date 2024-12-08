@@ -10,7 +10,7 @@ export function Terms() {
         className="text-center"
       >
         <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-        <p className="text-muted-foreground">Last updated: March 2024</p>
+        <p className="text-muted-foreground">Last updated: December 2024</p>
       </motion.div>
 
       <Card className="p-6 space-y-6 bg-background/95">

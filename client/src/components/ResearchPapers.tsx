@@ -8,16 +8,9 @@ const papers = [
     title: "Forecasting Commodity Prices using Machine Learning",
     journal: "International Journal of Scientific Research in Science and Technology (IJSRST)",
     year: "2024",
-    link: "#",
+    link: "https://ijsrst.com/home/issue/view/article.php?id=IJSRST52411110",
     abstract: "A comprehensive study on applying machine learning techniques to predict commodity price movements with high accuracy.",
-  },
-  {
-    title: "Deep Learning Approaches in Computer Vision",
-    journal: "AI Research Quarterly",
-    year: "2023",
-    link: "#",
-    abstract: "An analysis of modern deep learning architectures and their applications in computer vision tasks.",
-  },
+  }
 ]
 
 export function ResearchPapers() {
