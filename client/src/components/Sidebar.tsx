@@ -60,7 +60,7 @@ export function Sidebar() {
             })}
           </nav>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div className="flex justify-center">
             <ThemeToggle />
           </div>
@@ -79,6 +79,9 @@ export function Sidebar() {
                 </a>
               )
             })}
+          </div>
+          <div className="text-center text-sm text-muted-foreground border-t pt-4">
+            © {new Date().getFullYear()} Harsh Gupta. All rights reserved.
           </div>
         </div>
       </div>
