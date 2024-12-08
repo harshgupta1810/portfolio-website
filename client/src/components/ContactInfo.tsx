@@ -5,25 +5,25 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "contact@harshgupta.dev",
-    href: "mailto:contact@harshgupta.dev",
+    value: "harshgup11@gmail.com",
+    href: "mailto:harshgup11@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+91 (774) 246-9302",
+    href: "tel:+917742469302",
   },
   {
-    icon: Globe,
-    label: "Website",
-    value: "www.harshgupta.dev",
-    href: "https://www.harshgupta.dev",
+    icon: Github,
+    label: "Github",
+    value: "harshgupta1810",
+    href: "https://github.com/harshgupta1810",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Jaipur, India",
     href: "#",
   },
 ]
@@ -32,12 +32,12 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/harshgupta1810",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/harsh-gupta-52465a204/",
   },
 ]
 
