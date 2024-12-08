@@ -14,7 +14,6 @@ type Project = {
   category: string
   technologies: string[]
   githubLink: string
-  link: string
   impact: string
   results: string[]
   longDescription?: string
@@ -23,19 +22,19 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "AI Video Analytics Platform",
-    description: "Real-time video processing system with object detection and behavior analysis",
-    longDescription: "Our AI Video Analytics Platform represents a breakthrough in real-time video processing and analysis. Utilizing advanced deep learning models and computer vision techniques, we've created a system that can process multiple video streams simultaneously, detecting objects, analyzing behavior patterns, and generating actionable insights in real-time. The platform integrates seamlessly with existing security infrastructure and provides an intuitive interface for security personnel to monitor and respond to events as they occur.",
-    image: "https://via.placeholder.com/600x400",
-    category: "Computer Vision",
-    technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
-    githubLink: "https://github.com/yourusername/video-analytics",
-    link: "/projects/video-analytics",
-    impact: "40% improvement in threat detection accuracy",
+    title: "ChartVantage",
+    description: "Automates detection and analysis of stock chart patterns for trading strategies.",
+    longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
+    image: "/ChartVantage.jpg",
+    category: "Machine Learning",
+    technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
+    githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
+    impact: "40% improvement in pattern detection accuracy",
     results: [
-      "Processed 1000+ hours of video footage",
-      "Reduced false positives by 60%",
-      "Deployed across 5 client locations",
+      "Improvement: Achieved a 40% increase in pattern detection accuracy.",
+      "Scalability: Processed over 1 million stock charts.",
+      "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
+      "Impact: Enhanced trading accuracy, improving profitability for users"
     ],
   },
   {
@@ -47,7 +46,6 @@ const projects: Project[] = [
     category: "Machine Learning",
     technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
     githubLink: "https://github.com/yourusername/predictive-maintenance",
-    link: "/projects/predictive-maintenance",
     impact: "35% reduction in equipment downtime",
     results: [
       "Monitored 100+ industrial machines",

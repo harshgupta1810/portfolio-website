@@ -17,15 +17,16 @@ const projects = [
   {
     title: "ChartVantage",
     description: "Automates detection and analysis of stock chart patterns for trading strategies.",
-    longDescription: "ChartVantage is an advanced AI-powered platform that revolutionizes stock pattern analysis. Using deep learning models, it automatically detects and analyzes various chart patterns, providing traders with real-time insights and trading opportunities.",
-    image: "/ChartVantage1.jpg",
-    githubLink: "https://github.com/yourusername/chartvantage",
-    technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
+    longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
+    image: "/ChartVantage.jpg",
+    githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
+    technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
     stats: "40% improvement in pattern detection accuracy",
     impact: [
-      "Processed over 1 million stock charts",
-      "Reduced analysis time by 75%",
-      "Increased trading accuracy by 40%"
+      "Improvement: Achieved a 40% increase in pattern detection accuracy.",
+      "Scalability: Processed over 1 million stock charts.",
+      "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
+      "Impact: Enhanced trading accuracy, improving profitability for users"
     ]
   },
   {
