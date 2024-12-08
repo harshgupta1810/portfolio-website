@@ -19,7 +19,6 @@ const projects = [
     description: "Automates detection and analysis of stock chart patterns for trading strategies.",
     longDescription: "ChartVantage is an advanced AI-powered platform that revolutionizes stock pattern analysis. Using deep learning models, it automatically detects and analyzes various chart patterns, providing traders with real-time insights and trading opportunities.",
     image: "/ChartVantage1.jpg",
-    link: "/projects/video-analytics",
     githubLink: "https://github.com/yourusername/chartvantage",
     technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
     stats: "40% improvement in pattern detection accuracy",
@@ -34,7 +33,6 @@ const projects = [
     description: "Machine learning model for equipment failure prediction",
     longDescription: "A sophisticated predictive maintenance system that leverages machine learning to forecast potential equipment failures before they occur. The system analyzes real-time sensor data and historical maintenance records to prevent costly downtime.",
     image: "https://via.placeholder.com/400x300",
-    link: "/projects/predictive-maintenance",
     githubLink: "https://github.com/yourusername/predictive-maintenance",
     technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
     stats: "35% reduction in equipment downtime",
@@ -49,7 +47,6 @@ const projects = [
     description: "Automated document classification using NLP",
     longDescription: "An intelligent document classification system powered by state-of-the-art Natural Language Processing. The system automatically categorizes documents based on their content, streamlining document management workflows.",
     image: "https://via.placeholder.com/400x300",
-    link: "/projects/document-classifier",
     githubLink: "https://github.com/yourusername/document-classifier",
     technologies: ["Python", "BERT", "FastAPI", "PostgreSQL"],
     stats: "95% classification accuracy",
@@ -114,9 +111,9 @@ export function ProjectCarousel() {
                       </h3>
                       <p className="text-muted-foreground mb-4">{project.description}</p>
                       <div className="flex items-center gap-3">
-                        <Button 
-                          variant="default" 
-                          size="sm" 
+                        <Button
+                          variant="default"
+                          size="sm"
                           className="flex-1"
                           onClick={() => setSelectedProject(project)}
                         >
@@ -192,12 +189,6 @@ export function ProjectCarousel() {
                     >
                       <Github className="mr-2 h-4 w-4" />
                       View Code
-                    </a>
-                  </Button>
-                  <Button asChild>
-                    <a href={selectedProject.link}>
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Project
                     </a>
                   </Button>
                 </div>
