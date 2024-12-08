@@ -12,6 +12,7 @@ import { ExternalLink, ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { useState } from "react"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 interface Project {
   id: number
@@ -94,43 +95,45 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </Card>
 
       <Dialog open={showDetails} onOpenChange={setShowDetails}>
-        <DialogContent className="max-w-3xl">
-          <DialogHeader>
-            <DialogTitle>{project.title}</DialogTitle>
-            <DialogDescription>{project.description}</DialogDescription>
-          </DialogHeader>
-          <div className="space-y-4">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-64 object-cover rounded-lg"
-            />
-            {project.longDescription && (
+        <DialogContent className="max-w-3xl max-h-[90vh]">
+          <ScrollArea className="max-h-[calc(90vh-4rem)]">
+            <DialogHeader>
+              <DialogTitle>{project.title}</DialogTitle>
+              <DialogDescription>{project.description}</DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-64 object-cover rounded-lg"
+              />
+              {project.longDescription && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Overview</h3>
+                  <p className="text-muted-foreground">{project.longDescription}</p>
+                </div>
+              )}
               <div>
-                <h3 className="text-lg font-semibold mb-2">Overview</h3>
-                <p className="text-muted-foreground">{project.longDescription}</p>
+                <h3 className="text-lg font-semibold mb-2">Technologies Used</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="outline">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            )}
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Technologies Used</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="outline">
-                    {tech}
-                  </Badge>
-                ))}
+              <div>
+                <h3 className="text-lg font-semibold mb-2">Impact & Results</h3>
+                <p className="text-muted-foreground mb-2">{project.impact}</p>
+                <ul className="list-disc list-inside text-muted-foreground">
+                  {project.results.map((result, index) => (
+                    <li key={index}>{result}</li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Impact & Results</h3>
-              <p className="text-muted-foreground mb-2">{project.impact}</p>
-              <ul className="list-disc list-inside text-muted-foreground">
-                {project.results.map((result, index) => (
-                  <li key={index}>{result}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </>

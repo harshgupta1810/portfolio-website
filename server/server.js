@@ -99,6 +99,27 @@ app.use((err, req, res, next) => {
   res.status(500).send("There was an error serving your request.");
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+// Check if port is in use before starting server
+const checkPort = (port) => {
+  return new Promise((resolve, reject) => {
+    const server = app.listen(port)
+      .on('error', (err) => {
+        if (err.code === 'EADDRINUSE') {
+          console.log(`Port ${port} is busy, trying ${port + 1}`);
+          server.close();
+          resolve(checkPort(port + 1));
+        } else {
+          reject(err);
+        }
+      })
+      .on('listening', () => {
+        console.log(`Server running at http://localhost:${port}`);
+        resolve(server);
+      });
+  });
+};
+
+checkPort(port).catch(err => {
+  console.error('Failed to start server:', err);
+  process.exit(1);
 });
