@@ -11,8 +11,8 @@ import { useToast } from "@/hooks/useToast"
 
 const stats = [
   { label: "Projects Completed", value: "32+" },
-  { label: "Research Papers", value: "1" },
-  { label: "Datasets Processed", value: "230GB+" },
+  { label: "Research Papers", value: "1+" },
+  { label: "Datasets Processed", value: "15+" },
   { label: "Models Deployed", value: "15+" },
 ]
 
@@ -74,7 +74,7 @@ export function Home() {
               }}
             />
           </div>
-          <AnimatedButton 
+          <AnimatedButton
             onClick={handleDownloadResume}
             disabled={isDownloading}
           >

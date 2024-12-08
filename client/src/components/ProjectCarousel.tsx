@@ -11,9 +11,9 @@ import { ExternalLink } from "lucide-react"
 
 const projects = [
   {
-    title: "AI Video Analytics",
-    description: "Real-time video processing system with object detection",
-    image: "https://via.placeholder.com/400x300",
+    title: "ChartVantage",
+    description: "Automates detection and analysis of stock chart patterns for trading strategies.",
+    image: "/ChartVantage1.jpg",
     link: "/projects/video-analytics",
   },
   {

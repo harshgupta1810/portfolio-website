@@ -23,8 +23,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
+        <Toaster />
       </Router>
-      <Toaster />
     </ThemeProvider>
   )
 }

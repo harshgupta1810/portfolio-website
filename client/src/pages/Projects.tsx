@@ -13,9 +13,11 @@ type Project = {
   image: string
   category: string
   technologies: string[]
+  githubLink: string
   link: string
   impact: string
   results: string[]
+  longDescription?: string
 }
 
 const projects: Project[] = [
@@ -23,9 +25,11 @@ const projects: Project[] = [
     id: 1,
     title: "AI Video Analytics Platform",
     description: "Real-time video processing system with object detection and behavior analysis",
+    longDescription: "Our AI Video Analytics Platform represents a breakthrough in real-time video processing and analysis. Utilizing advanced deep learning models and computer vision techniques, we've created a system that can process multiple video streams simultaneously, detecting objects, analyzing behavior patterns, and generating actionable insights in real-time. The platform integrates seamlessly with existing security infrastructure and provides an intuitive interface for security personnel to monitor and respond to events as they occur.",
     image: "https://via.placeholder.com/600x400",
     category: "Computer Vision",
     technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
+    githubLink: "https://github.com/yourusername/video-analytics",
     link: "/projects/video-analytics",
     impact: "40% improvement in threat detection accuracy",
     results: [
@@ -38,9 +42,11 @@ const projects: Project[] = [
     id: 2,
     title: "Predictive Maintenance System",
     description: "Machine learning model for equipment failure prediction in manufacturing",
+    longDescription: "The Predictive Maintenance System is an innovative solution that leverages machine learning to predict potential equipment failures before they occur. By analyzing real-time sensor data and historical maintenance records, the system can identify patterns that precede equipment failures, allowing maintenance teams to take proactive measures. This predictive approach has significantly reduced downtime and maintenance costs for our manufacturing clients.",
     image: "https://via.placeholder.com/600x400",
     category: "Machine Learning",
     technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
+    githubLink: "https://github.com/yourusername/predictive-maintenance",
     link: "/projects/predictive-maintenance",
     impact: "35% reduction in equipment downtime",
     results: [
@@ -49,7 +55,6 @@ const projects: Project[] = [
       "99% prediction accuracy",
     ],
   },
-  // Add more projects...
 ]
 
 const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Data Analytics"]
