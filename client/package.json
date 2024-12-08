@@ -8,8 +8,11 @@
     "dev": "vite --port 5173 --force",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://github.com/harshgupta1810/portfolio-website.git",
   "dependencies": {
     "@fontsource/jetbrains-mono": "^5.1.1",
     "@fontsource/space-grotesk": "^5.1.0",
