@@ -24,11 +24,8 @@ A modern, responsive portfolio website showcasing expertise in Data Science, Mac
 - React Router
 - React Hook Form
 
-### Backend
-- Node.js
-- Express
-- MongoDB (optional)
 
 ## 🏗️ Installation
 
-1. Clone the repository:
+1. Clone the repository: https://github.com/harshgupta1810/portfolio-website
+2. cd portfolio-website
