@@ -15,6 +15,6 @@ export default defineConfig({
   },
   server: {
     port: 5173,
-    strictPort: true
+    strictPort: false // This allows Vite to try other ports if 5173 is in use
   }
 })

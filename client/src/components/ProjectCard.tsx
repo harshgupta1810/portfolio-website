@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, ChevronRight } from "lucide-react"
+import { ExternalLink, ChevronRight, Github } from "lucide-react"
 import { motion } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { useState } from "react"
@@ -131,6 +131,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
                     <li key={index}>{result}</li>
                   ))}
                 </ul>
+              </div>
+              <div className="flex justify-end gap-2">
+                <Button variant="outline" asChild>
+                  <a 
+                    href={project.githubLink}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <Github className="h-4 w-4" />
+                    View Code
+                  </a>
+                </Button>
               </div>
             </div>
           </ScrollArea>
