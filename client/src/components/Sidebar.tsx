@@ -10,7 +10,7 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter
+  Database
 } from "lucide-react"
 
 const menuItems = [
@@ -23,9 +23,9 @@ const menuItems = [
 ]
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/yourusername" },
-  { icon: Linkedin, href: "https://linkedin.com/in/yourusername" },
-  { icon: Twitter, href: "https://twitter.com/yourusername" },
+  { icon: Github, href: "https://github.com/harshgupta1810" },
+  { icon: Linkedin, href: "https://linkedin.com/in/harsh-gupta-52465a204" },
+  { icon: Database, href: "https://www.kaggle.com/desperateenuf"}
 ]
 
 export function Sidebar() {
