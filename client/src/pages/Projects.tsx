@@ -73,9 +73,29 @@ const projects: Project[] = [
   ]
 },
 
+{
+  "id": 4,
+  "title": "Music Maestro: Genre Classification",
+  "description": "Predict music genres using AI-powered models.",
+  "longDescription": "Music Maestro is a deep learning project designed to classify music genres accurately. It combines Artificial Neural Networks (ANNs) and Convolutional Neural Networks (CNNs) trained on the GTZAN dataset to differentiate between various music styles. The project features a backend for model training and predictions, as well as a Flask-based frontend for user interaction.",
+  "image": "/MusicMaestro.jpg",
+  "category": "Deep Learning",
+  "technologies": ["Python", "TensorFlow", "Keras", "Flask", "Librosa"],
+  "githubLink": "https://github.com/harshgupta1810/music_genre_classification",
+  "impact": "Enhanced genre prediction accuracy with over 90% on the test dataset.",
+  "results": [
+    "Accuracy: Achieved state-of-the-art performance on the GTZAN dataset.",
+    "Usability: Provided an interactive web interface for genre classification.",
+    "Scalability: Extended the model for real-time predictions on user-uploaded audio files.",
+    "Innovation: Combined ANN and CNN approaches for robust classification."
+  ]
+},
+
+
+
 ]
 
-const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Data Analytics"]
+const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development",]
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All")

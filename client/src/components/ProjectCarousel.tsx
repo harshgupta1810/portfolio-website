@@ -31,8 +31,8 @@ const projects = [
   },
   {
     "title": "Vigilant Sentinel: Intelligent Video Surveillance",
-    "description": "Machine learning model for equipment failure prediction.",
-    "longDescription": "A sophisticated predictive maintenance system that leverages machine learning to forecast potential equipment failures before they occur. The system analyzes real-time sensor data and historical maintenance records to prevent costly downtime.",
+    "description": "An intelligent video surveillance system for real-time anomaly detection in video streams.",
+    "longDescription": "Vigilant Sentinel is an AI-powered video surveillance system designed to detect abnormal events in real-time video streams. Leveraging neural networks and computer vision techniques, it processes live video to identify anomalies, providing an automated solution for enhanced security monitoring.",
     "image": "/Vigilant Sentinel.jpg",
     "githubLink": "https://github.com/harshgupta1810/Intelligent_video_surveillance",
     "technologies": ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
