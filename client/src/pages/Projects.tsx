@@ -145,6 +145,60 @@ const projects: Project[] = [
   ]
 },
 
+{
+  "id": 8,
+  "title": "Empath-o-Tron: Face Sentiment Analysis",
+  "description": "Recognize facial expressions using deep learning models trained on FER datasets.",
+  "longDescription": "Empath-o-Tron is a deep learning project that classifies facial expressions into 8 emotional categories using the Facial Expression Recognition Challenge dataset. It demonstrates data preprocessing, model architecture design, training, and evaluation, and provides insights into real-world applications of facial emotion recognition.",
+  "image": "\Empath-o-Tron.jpg",
+  "category": "Deep Learning",
+  "technologies": ["Python", "TensorFlow", "Keras", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+  "githubLink": "https://github.com/harshgupta1810/face_sentiment",
+  "impact": "Developed a robust deep learning model to classify facial expressions, paving the way for applications in human-computer interaction, psychology, and social research.",
+  "results": [
+    "Model Accuracy: Achieved competitive accuracy on the validation dataset.",
+    "Dataset Handling: Preprocessed 35,000 images from the FER dataset with one-hot encoding and augmentation.",
+    "Model Design: Implemented a CNN with ELU activation and dropout layers for optimal performance.",
+    "Educational Value: Provided an example of end-to-end deep learning implementation for emotion detection."
+  ]
+},
+
+{
+  "id": 9,
+  "title": "Insightful Oracle: Gender Age Prediction",
+  "description": "Estimate gender and age from facial images using deep learning models trained on the UTKFace dataset.",
+  "longDescription": "Insightful Oracle is a deep learning project that predicts gender and age from facial images. It utilizes the UTKFace dataset, which includes over 20,000 annotated images spanning a wide range of ages, genders, and ethnicities. The project demonstrates data preprocessing, model training, evaluation, and real-world applications for demographic analysis.",
+  "image": "\Insightful-Oracle.jpg",
+  "category": "Deep Learning",
+  "technologies": ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Matplotlib", "Pandas"],
+  "githubLink": "https://github.com/harshgupta1810/Gender_Age_Prediction-",
+  "impact": "Developed a reliable model for gender and age prediction, enabling applications in demographic studies, marketing, and identity verification.",
+  "results": [
+    "Model Performance: Achieved accurate predictions of gender and age on the validation dataset.",
+    "Dataset Handling: Preprocessed over 20,000 images from the UTKFace dataset, including resizing and normalization.",
+    "Model Design: Built a convolutional neural network with dual-output for simultaneous gender and age predictions.",
+    "Practical Application: Demonstrated robust real-world use cases such as personalized marketing and demographic analysis."
+  ]
+},
+
+{
+  "id": 10,
+  "title": "Asana Analyzer: Yoga Pose Predictor",
+  "description": "Classify yoga poses from images using deep learning techniques with TensorFlow and Keras.",
+  "longDescription": "Asana Analyzer is a machine learning project that classifies yoga poses from images. The project includes both backend and frontend components, where the backend handles model training and image classification, and the frontend provides a user-friendly interface for interaction. It uses the 'yoga-pose-image-classification-dataset' and employs techniques like transfer learning, data augmentation, and TensorFlow to train the model. The system is integrated with a Flask-based web application for easy usage.",
+  "image": "AsanaAnalyzer.jpg",
+  "category": "Computer Vision",
+  "technologies": ["Python","TensorFlow","Keras","Flask","HTML","CSS","JavaScript","NumPy","Matplotlib","Pillow"],
+  "githubLink": "https://github.com/harshgupta1810/Yoga_Pose_Predictor",
+  "impact": "Built an image classification model for yoga pose recognition, enabling automatic classification of yoga poses in real-time with a user-friendly web interface.",
+  "results": [
+    "Model Performance: Achieved accurate predictions of yoga poses using transfer learning with InceptionResNetV2.",
+    "Dataset Handling: Preprocessed and augmented yoga pose images to improve model generalization and accuracy.",
+    "Model Design: Built a deep learning model with custom classification layers on top of a pre-trained InceptionResNetV2 model.",
+    "Practical Application: Enabled real-time yoga pose prediction via a web interface for educational and fitness purposes."
+  ]
+}
+
 
 ]
 
