@@ -109,6 +109,42 @@ const projects: Project[] = [
   ]
 },
 
+{
+  "id": 6,
+  "title": "Dragon's Quest: Flappy Bird Reimagined",
+  "description": "Navigate a bird through challenging obstacles in this engaging 2D side-scroller.",
+  "longDescription": "Dragon's Quest is a reimagined take on the classic Flappy Bird game, built using the LÖVE2D framework and Lua. Players control a bird, navigating it through a series of pipes by tapping the spacebar to stay airborne. With its dynamic gameplay, state management, and scoring mechanics, the game offers an exciting challenge while showcasing key game development concepts.",
+  "image": "\DragonsQuest.jpg",
+  "category": "Game Development",
+  "technologies": ["Lua", "LÖVE2D"],
+  "githubLink": "https://github.com/harshgupta1810/dragonsquest",
+  "impact": "Revitalized the Flappy Bird concept with added features and scalable design.",
+  "results": [
+    "Gameplay: Smooth controls and collision detection for an engaging experience.",
+    "Graphics: Added scrolling background and scalable resolution support for visual appeal.",
+    "User Experience: Included sound effects and state-based UI transitions for immersion.",
+    "Educational Value: Demonstrated advanced game development concepts like state machines, object-oriented programming, and procedural obstacle generation."
+  ]
+},
+
+{
+  "id": 7,
+  "title": "Audio Alchemy: Audio Classification using MFCC and Neural Networks",
+  "description": "Classify urban sounds into 10 categories using neural networks and MFCCs.",
+  "longDescription": "Audio Alchemy is a project that leverages Mel-Frequency Cepstral Coefficients (MFCC) and neural networks to classify urban sounds. Using the UrbanSound8K dataset, the project demonstrates audio preprocessing, feature extraction, and classification with an interactive frontend built on Flask.",
+  "image": "\AudioAlchemy.jpeg",
+  "category": "Deep Learning",
+  "technologies": ["Python", "TensorFlow", "Librosa", "Flask",],
+  "githubLink": "https://github.com/harshgupta1810/Audio_Classification-",
+  "impact": "Showcased practical applications of audio classification with a robust frontend-backend pipeline.",
+  "results": [
+    "Model Accuracy: Achieved high classification accuracy using neural networks.",
+    "Dataset Handling: Successfully preprocessed and extracted features from UrbanSound8K.",
+    "Frontend: Developed a user-friendly Flask application for real-time audio classification.",
+    "Educational Value: Demonstrated advanced ML techniques like feature engineering and model deployment."
+  ]
+},
+
 
 ]
 
