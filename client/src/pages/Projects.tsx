@@ -91,11 +91,28 @@ const projects: Project[] = [
   ]
 },
 
+{
+  "id": 5,
+  "title": "Paddle Wars: The battle for paddle supremacy",
+  "description": "Relive the classic arcade experience with this two-player Pong game.",
+  "longDescription": "The Paddle Wars is a simple yet engaging project built using the LÖVE2D framework and Lua. It replicates the timeless Pong arcade game, where two players compete to score points by hitting the ball back and forth with paddles. This project demonstrates basic game mechanics, collision detection, and state management in game development.",
+  "image": "\PaddleWars.webp",
+  "category": "Game Development",
+  "technologies": ["Lua", "LÖVE2D"],
+  "githubLink": "https://github.com/harshgupta1810/pingpong_using_lua",
+  "impact": "Recreated the classic Pong experience with modern scalability and resolution handling.",
+  "results": [
+    "Gameplay: Seamless two-player mode with responsive paddle controls.",
+    "Graphics: Integrated virtual resolution scaling for compatibility with various screen sizes.",
+    "User Experience: Added sound effects and UI transitions for an immersive experience.",
+    "Educational Value: Demonstrated key concepts like object-oriented programming and game state management."
+  ]
+},
 
 
 ]
 
-const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development",]
+const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development","Deep Learning"]
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All")
