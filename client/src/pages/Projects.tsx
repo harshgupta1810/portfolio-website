@@ -38,21 +38,41 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 2,
-    title: "Predictive Maintenance System",
-    description: "Machine learning model for equipment failure prediction in manufacturing",
-    longDescription: "The Predictive Maintenance System is an innovative solution that leverages machine learning to predict potential equipment failures before they occur. By analyzing real-time sensor data and historical maintenance records, the system can identify patterns that precede equipment failures, allowing maintenance teams to take proactive measures. This predictive approach has significantly reduced downtime and maintenance costs for our manufacturing clients.",
-    image: "https://via.placeholder.com/600x400",
-    category: "Machine Learning",
-    technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
-    githubLink: "https://github.com/yourusername/predictive-maintenance",
-    impact: "35% reduction in equipment downtime",
-    results: [
-      "Monitored 100+ industrial machines",
-      "Saved $500K in maintenance costs",
-      "99% prediction accuracy",
-    ],
-  },
+    "id": 2,
+    "title": "Vigilant Sentinel",
+    "description": "An intelligent video surveillance system for real-time anomaly detection in video streams.",
+    "longDescription": "Vigilant Sentinel is an AI-powered video surveillance system designed to detect abnormal events in real-time video streams. Leveraging neural networks and computer vision techniques, it processes live video to identify anomalies, providing an automated solution for enhanced security monitoring.",
+    "image": "/Vigilant Sentinel.jpg",
+    "category": "Computer Vision",
+    "technologies": ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
+    "githubLink": "https://github.com/harshgupta1810/VigilantSentinel.git",
+    "impact": "75% faster anomaly detection compared to traditional methods.",
+    "results": [
+        "Accuracy: Achieved precise detection of anomalies with minimal false positives.",
+        "Efficiency: Reduced video analysis time by 50%, enabling real-time monitoring.",
+        "Scalability: Designed to handle various environments, from malls to streets.",
+        "Impact: Improved security monitoring through real-time anomaly detection."
+    ]
+},
+
+{
+  "id": 3,
+  "title": "Poetic Prowess: Poetry Generator",
+  "description": "Generate rap lyrics using AI-powered models.",
+  "longDescription": "Poetic Prowess is an AI-driven poetry generator that combines Markov chains and LSTM neural networks to compose rap lyrics. It leverages a custom database of hip-hop artist lyrics to generate unique and creative verses based on user prompts. The project features a backend for training and generation, along with a frontend for user interaction.",
+  "image": "/PoeticProwess.jpg",
+  "category": "NLP",
+  "technologies": ["Python", "TensorFlow", "Markov Chains", "Flask", "LSTM"],
+  "githubLink": "https://github.com/harshgupta1810/Poetry_Generator",
+  "impact": "85% coherence score for generated lyrics, empowering creative exploration.",
+  "results": [
+    "Creativity: Produced thousands of unique rap lines to aid in songwriting.",
+    "Efficiency: Reduced time spent brainstorming lyrics by providing AI-generated ideas.",
+    "Versatility: Supported a wide variety of prompts for personalized lyric generation.",
+    "Impact: Highlighted the creative potential of AI in the music industry."
+  ]
+},
+
 ]
 
 const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Data Analytics"]

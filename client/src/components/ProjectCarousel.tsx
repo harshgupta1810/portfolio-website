@@ -30,33 +30,35 @@ const projects = [
     ]
   },
   {
-    title: "Predictive Maintenance",
-    description: "Machine learning model for equipment failure prediction",
-    longDescription: "A sophisticated predictive maintenance system that leverages machine learning to forecast potential equipment failures before they occur. The system analyzes real-time sensor data and historical maintenance records to prevent costly downtime.",
-    image: "https://via.placeholder.com/400x300",
-    githubLink: "https://github.com/yourusername/predictive-maintenance",
-    technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
-    stats: "35% reduction in equipment downtime",
-    impact: [
-      "Monitored 100+ industrial machines",
-      "Saved $500K in maintenance costs",
-      "Achieved 95% prediction accuracy"
+    "title": "Vigilant Sentinel: Intelligent Video Surveillance",
+    "description": "Machine learning model for equipment failure prediction.",
+    "longDescription": "A sophisticated predictive maintenance system that leverages machine learning to forecast potential equipment failures before they occur. The system analyzes real-time sensor data and historical maintenance records to prevent costly downtime.",
+    "image": "/Vigilant Sentinel.jpg",
+    "githubLink": "https://github.com/harshgupta1810/Intelligent_video_surveillance",
+    "technologies": ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
+    "stats": "75% faster anomaly detection compared to traditional methods.",
+    "impact": [
+        "Accuracy: Achieved precise detection of anomalies with minimal false positives.",
+        "Efficiency: Reduced video analysis time by 50%, enabling real-time monitoring.",
+        "Scalability: Designed to handle various environments, from malls to streets.",
+        "Impact: Improved security monitoring through real-time anomaly detection."
     ]
-  },
-  {
-    title: "NLP Document Classifier",
-    description: "Automated document classification using NLP",
-    longDescription: "An intelligent document classification system powered by state-of-the-art Natural Language Processing. The system automatically categorizes documents based on their content, streamlining document management workflows.",
-    image: "https://via.placeholder.com/400x300",
-    githubLink: "https://github.com/yourusername/document-classifier",
-    technologies: ["Python", "BERT", "FastAPI", "PostgreSQL"],
-    stats: "95% classification accuracy",
-    impact: [
-      "Processed 1M+ documents",
-      "Reduced manual classification time by 90%",
-      "Improved accuracy by 25%"
-    ]
-  },
+},
+
+{
+  "title": "Poetic Prowess: Poetry Generator",
+  "description": "Generate rap lyrics using AI-powered models.",
+  "longDescription": "An innovative poetry generator that uses Markov chains and LSTM neural networks to create rap lyrics. With a custom database of hip-hop artist lyrics, this tool combines machine learning and creativity to craft unique lines based on user prompts.",
+  "image": "/PoeticProwess.jpg",
+  "githubLink": "https://github.com/harshgupta1810/Poetry_Generator",
+  "technologies": ["Python", "Markov Chains", "LSTM", "Flask", "TensorFlow"],
+  "stats": "85% coherence score for generated lyrics",
+  "impact": [
+    "Generated 10,000+ lines of lyrics",
+    "Enabled artists to brainstorm creative ideas",
+    "Showcased AI's potential in creative fields"
+  ]
+}
 ]
 
 export function ProjectCarousel() {
