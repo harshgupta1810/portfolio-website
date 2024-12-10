@@ -54,7 +54,6 @@ const projects: Project[] = [
         "Impact: Improved security monitoring through real-time anomaly detection."
     ]
 },
-
 {
   "id": 3,
   "title": "Poetic Prowess: Poetry Generator",
@@ -72,7 +71,6 @@ const projects: Project[] = [
     "Impact: Highlighted the creative potential of AI in the music industry."
   ]
 },
-
 {
   "id": 4,
   "title": "Music Maestro: Genre Classification",
@@ -90,7 +88,6 @@ const projects: Project[] = [
     "Innovation: Combined ANN and CNN approaches for robust classification."
   ]
 },
-
 {
   "id": 5,
   "title": "Paddle Wars: The battle for paddle supremacy",
@@ -108,7 +105,6 @@ const projects: Project[] = [
     "Educational Value: Demonstrated key concepts like object-oriented programming and game state management."
   ]
 },
-
 {
   "id": 6,
   "title": "Dragon's Quest: Flappy Bird Reimagined",
@@ -126,7 +122,6 @@ const projects: Project[] = [
     "Educational Value: Demonstrated advanced game development concepts like state machines, object-oriented programming, and procedural obstacle generation."
   ]
 },
-
 {
   "id": 7,
   "title": "Audio Alchemy: Audio Classification using MFCC and Neural Networks",
@@ -144,7 +139,6 @@ const projects: Project[] = [
     "Educational Value: Demonstrated advanced ML techniques like feature engineering and model deployment."
   ]
 },
-
 {
   "id": 8,
   "title": "Empath-o-Tron: Face Sentiment Analysis",
@@ -162,7 +156,6 @@ const projects: Project[] = [
     "Educational Value: Provided an example of end-to-end deep learning implementation for emotion detection."
   ]
 },
-
 {
   "id": 9,
   "title": "Insightful Oracle: Gender Age Prediction",
@@ -180,7 +173,6 @@ const projects: Project[] = [
     "Practical Application: Demonstrated robust real-world use cases such as personalized marketing and demographic analysis."
   ]
 },
-
 {
   "id": 10,
   "title": "Asana Analyzer: Yoga Pose Predictor",
@@ -197,12 +189,30 @@ const projects: Project[] = [
     "Model Design: Built a deep learning model with custom classification layers on top of a pre-trained InceptionResNetV2 model.",
     "Practical Application: Enabled real-time yoga pose prediction via a web interface for educational and fitness purposes."
   ]
+},
+
+{
+  "id": 11,
+  "title": "T20 World Cup Analysis Project",
+  "description": "Analyze T20 World Cup cricket data using Python for processing and Power BI for visualizations.",
+  "longDescription": "The T20 World Cup Analysis Project provides a comprehensive exploration of cricket data, offering actionable insights into player performances, match outcomes, and team strategies. This project combines Python for data analysis and Power BI for dynamic visualizations, enabling users to uncover patterns, optimize strategies, and make data-driven decisions. It features reusable datasets, pre-built dashboards, and advanced analytics through DAX measures and calculated columns.",
+  "image": "T20WorldCupAnalysis.webp",
+  "category": "Data Analytics",
+  "technologies": ["Python", "Power BI", "DAX", "Pandas", "NumPy", "Jupyter", "Matplotlib", "JSON", "CSV"],
+  "githubLink": "https://github.com/harshgupta1810/T20_worldcup_analysis",
+  "impact": "Delivered data-driven insights into cricket performances and strategies, enabling better understanding and decision-making for fans, analysts, and teams.",
+  "results": [
+    "Actionable Insights: Analyzed batting, bowling, and match outcomes to identify key trends.",
+    "Interactive Dashboards: Created Power BI reports for exploring player performances and team strategies.",
+    "Advanced Analytics: Utilized DAX measures and calculated columns for deeper insights into the data.",
+    "Scalable Framework: Provided reusable datasets and scripts for future customization and analysis."
+  ]
 }
 
 
 ]
 
-const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development","Deep Learning"]
+const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development","Deep Learning","Python","Data Analytics"]
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All")
