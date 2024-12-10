@@ -21,25 +21,25 @@ type Project = {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "ChartVantage",
-    description: "Automates detection and analysis of stock chart patterns for trading strategies.",
-    longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
-    image: "/ChartVantage.jpg",
-    category: "Machine Learning",
-    technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
-    githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
-    impact: "40% improvement in pattern detection accuracy",
-    results: [
-      "Improvement: Achieved a 40% increase in pattern detection accuracy.",
-      "Scalability: Processed over 1 million stock charts.",
-      "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
-      "Impact: Enhanced trading accuracy, improving profitability for users"
-    ],
+    "id": 1,
+    "title": "SmartCommodities : AI Based Commodity Price Predictor",
+    "description": "A machine learning-based project that forecasts commodity prices using advanced algorithms.",
+    "longDescription": "SmartCommodities is a project designed to predict commodity prices by leveraging advanced machine learning techniques. The project includes data collection, exploratory data analysis (EDA), model training, and performance evaluation. It provides insights into trends in commodity prices and applies various machine learning models for price forecasting, aiming to deliver accurate predictions and improve decision-making for traders and analysts.",
+    "image": "SmartCommodities.jpg",
+    "category": "Deep Learning",
+    "technologies": ["Python", "Jupyter Notebook", "pandas", "numpy", "scikit-learn", "matplotlib", "seaborn","Regression Models","Model Evaluation","Automation","Financial Data Analysis"],
+    "githubLink": "https://github.com/harshgupta1810/commodity_price_prediction",
+    "impact": "Helps in predicting commodity prices using machine learning, providing valuable insights into market trends, and offering a tool for improving trading decisions and forecasting accuracy.",
+    "results": [
+      "Data Collection: Automated scripts for gathering and preprocessing commodity price data from various sources.",
+      "Exploratory Data Analysis: Visualizations and statistical analyses uncovering insights and trends within the dataset.",
+      "Model Development: Applied various machine learning algorithms to predict commodity prices with high accuracy.",
+      "Performance Evaluation: Comprehensive metrics and visualizations to assess model performance and prediction accuracy."
+    ]
   },
   {
     "id": 2,
-    "title": "Vigilant Sentinel",
+    "title": "Vigilant Sentinel : intelligent video surveillance system",
     "description": "An intelligent video surveillance system for real-time anomaly detection in video streams.",
     "longDescription": "Vigilant Sentinel is an AI-powered video surveillance system designed to detect abnormal events in real-time video streams. Leveraging neural networks and computer vision techniques, it processes live video to identify anomalies, providing an automated solution for enhanced security monitoring.",
     "image": "/Vigilant Sentinel.jpg",
@@ -56,12 +56,12 @@ const projects: Project[] = [
 },
 {
   "id": 3,
-  "title": "Poetic Prowess: Poetry Generator",
+  "title": "Poetic Prowess: Rap Generator",
   "description": "Generate rap lyrics using AI-powered models.",
-  "longDescription": "Poetic Prowess is an AI-driven poetry generator that combines Markov chains and LSTM neural networks to compose rap lyrics. It leverages a custom database of hip-hop artist lyrics to generate unique and creative verses based on user prompts. The project features a backend for training and generation, along with a frontend for user interaction.",
+  "longDescription": "Poetic Prowess is an AI-driven Rap generator that combines Markov chains and LSTM neural networks to compose rap lyrics. It leverages a custom database of hip-hop artist lyrics to generate unique and creative verses based on user prompts. The project features a backend for training and generation, along with a frontend for user interaction.",
   "image": "/PoeticProwess.jpg",
   "category": "NLP",
-  "technologies": ["Python", "TensorFlow", "Markov Chains", "Flask", "LSTM"],
+  "technologies": ["Python", "TensorFlow", "Markov Chains", "Flask", "LSTM","NLP"],
   "githubLink": "https://github.com/harshgupta1810/Poetry_Generator",
   "impact": "85% coherence score for generated lyrics, empowering creative exploration.",
   "results": [
@@ -257,6 +257,56 @@ const projects: Project[] = [
     "Visualization: Displayed the original cover image alongside the stego image for comparison."
   ]
 },
+{
+  "id": 15,
+  "title": "Face Recognition App",
+  "description": "A machine learning-based application that identifies faces with two eyes in an image.",
+  "longDescription": "The Face Recognition App is a simple application designed to detect and classify faces in an image using a pre-trained machine learning model. It identifies faces that have two eyes, processes them, and predicts their class based on the provided model. This project demonstrates the fundamentals of face recognition using popular libraries like OpenCV and Streamlit.",
+  "image": "FaceRecognitionApp.jpg",
+  "category": "Machine Learning",
+  "technologies": ["Python", "OpenCV", "Streamlit", "Pillow", "NumPy", "Joblib"],
+  "githubLink": "https://github.com/harshgupta1810/Celebility_Face_Identification",
+  "impact": "Provided a foundational example of face recognition for learners and developers, demonstrating how to utilize machine learning for image-based classifications.",
+  "results": [
+    "Face Detection: Successfully identified faces with two eyes in uploaded images.",
+    "Classification: Accurately predicted the class of detected faces using a pre-trained model.",
+    "User Interaction: Allowed users to upload images via a user-friendly Streamlit interface."
+  ]
+},
+{
+  id: 16,
+  title: "ChartVantage",
+  description: "Automates detection and analysis of stock chart patterns for trading strategies.",
+  longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
+  image: "/ChartVantage.jpg",
+  category: "Machine Learning",
+  technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
+  githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
+  impact: "40% improvement in pattern detection accuracy",
+  results: [
+    "Improvement: Achieved a 40% increase in pattern detection accuracy.",
+    "Scalability: Processed over 1 million stock charts.",
+    "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
+    "Impact: Enhanced trading accuracy, improving profitability for users"
+  ],
+},
+{
+  "id": 17,
+  "title": "Neesaan : Personal Python Assistant",
+  "description": "A Python-based personal python assistant that can perform various tasks like answering questions, sending emails, playing music, and more.",
+  "longDescription": "Neesaan is a versatile Python-based personal python assistant created by Harsh Gupta. It can perform a variety of tasks such as answering questions, opening websites, playing music, reading notes, sending emails, providing weather updates, telling jokes, converting currency, and much more. Neesaan utilizes several libraries and APIs to seamlessly execute these tasks, offering an efficient and user-friendly experience.",
+  "image": "/Neesaan.jpeg",
+  "category": "Python",
+  "technologies": ["Python", "pyttsx3", "speech_recognition", "wikipedia", "pyjokes", "pywhatkit", "smtplib", "requests", "geopy", "wolframalpha"],
+  "githubLink": "https://github.com/harshgupta1810/Personal_assistant_using_python",
+  "impact": "Improved user productivity and accessibility with voice commands",
+  "results": [
+    "Voice Command Integration: Enabled seamless user interaction through voice commands.",
+    "Multi-Tasking: Implemented features like weather updates, currency conversion, and joke-telling, increasing the range of tasks it can handle.",
+    "Automation: Automated tasks such as sending emails, changing wallpapers, and controlling volume, reducing manual efforts.",
+    "Real-time Information: Integrated with APIs to provide live weather, news, and quotes, enhancing user experience with up-to-date data."
+  ]
+}
 
 
 ]
@@ -270,7 +320,7 @@ export function Projects() {
   const filteredProjects = projects.filter((project) => {
     const matchesCategory = selectedCategory === "All" || project.category === selectedCategory
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase())
+                        project.description.toLowerCase().includes(searchQuery.toLowerCase())
     return matchesCategory && matchesSearch
   })
 

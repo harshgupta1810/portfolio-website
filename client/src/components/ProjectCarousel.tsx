@@ -15,18 +15,18 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 
 const projects = [
   {
-    title: "ChartVantage",
-    description: "Automates detection and analysis of stock chart patterns for trading strategies.",
-    longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
-    image: "/ChartVantage.jpg",
-    githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
-    technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
-    stats: "40% improvement in pattern detection accuracy",
+    title: "SmartCommodities : AI Based Commodity Price Predictor",
+    description: "A machine learning-based project that forecasts commodity prices using advanced algorithms.",
+    longDescription: "SmartCommodities is a project designed to predict commodity prices by leveraging advanced machine learning techniques. The project includes data collection, exploratory data analysis (EDA), model training, and performance evaluation. It provides insights into trends in commodity prices and applies various machine learning models for price forecasting, aiming to deliver accurate predictions and improve decision-making for traders and analysts.",
+    image: "/SmartCommodities.jpg",
+    githubLink: "https://github.com/harshgupta1810/commodity_price_prediction",
+    technologies: ["scikit-learn","Regression Models","Model Evaluation","Automation","Financial Data Analysis"],
+    stats: "Helps in predicting commodity prices using machine learning, providing valuable insights into market trends, and offering a tool for improving trading decisions and forecasting accuracy.",
     impact: [
-      "Improvement: Achieved a 40% increase in pattern detection accuracy.",
-      "Scalability: Processed over 1 million stock charts.",
-      "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
-      "Impact: Enhanced trading accuracy, improving profitability for users"
+      "Data Collection: Automated scripts for gathering and preprocessing commodity price data from various sources.",
+      "Exploratory Data Analysis: Visualizations and statistical analyses uncovering insights and trends within the dataset.",
+      "Model Development: Applied various machine learning algorithms to predict commodity prices with high accuracy.",
+      "Performance Evaluation: Comprehensive metrics and visualizations to assess model performance and prediction accuracy."
     ]
   },
   {
