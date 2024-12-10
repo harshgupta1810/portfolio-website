@@ -323,6 +323,23 @@ const projects: Project[] = [
     "High Accuracy: Achieved a reliable spam detection model with high precision and recall scores.",
     "User-Friendly: Easy-to-use Python script for practical applications in spam filtering systems."
   ]
+},
+{
+  "id": 19,
+  "title": "Bookify: AI-Based Book Recommendations",
+  "description": "An AI-powered book recommendation system offering both popularity-based and collaborative filtering-based suggestions.",
+  "longDescription": "Bookify is a Python-based book recommendation system that combines popularity-based and collaborative filtering-based approaches to suggest books. The popularity-based model recommends books based on their number of ratings and average ratings, while the collaborative filtering model uses user-item interaction data to suggest books similar to the input. This project aims to enhance the reading experience by helping users discover books tailored to their preferences.",
+  "image": "/Bookify.jpeg",
+  "category": "Recommendation Systems",
+  "technologies": ["Python", "NumPy", "Pandas", "scikit-learn", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+  "githubLink": "https://github.com/harshgupta1810/bookify",
+  "impact": "Empowers users to find books that match their interests, fostering an engaging and personalized reading experience.",
+  "results": [
+    "Popularity-Based Recommendations: Successfully identifies and ranks books based on ratings and user popularity.",
+    "Collaborative Filtering: Implements user-item interaction analysis to suggest books related to user preferences.",
+    "Scalable: The system can adapt to various datasets, making it versatile for different use cases.",
+    "Easy Integration: The codebase is straightforward, enabling seamless adoption for personal or academic projects."
+  ]
 }
 
 
