@@ -190,7 +190,6 @@ const projects: Project[] = [
     "Practical Application: Enabled real-time yoga pose prediction via a web interface for educational and fitness purposes."
   ]
 },
-
 {
   "id": 11,
   "title": "T20 World Cup Analysis Project",
@@ -207,7 +206,41 @@ const projects: Project[] = [
     "Advanced Analytics: Utilized DAX measures and calculated columns for deeper insights into the data.",
     "Scalable Framework: Provided reusable datasets and scripts for future customization and analysis."
   ]
-}
+},
+{
+  "id": 12,
+  "title": "Real Estate Price Prediction",
+  "description": "Predict real estate prices in Bengaluru using Python and machine learning techniques.",
+  "longDescription": "The Real Estate Price Prediction project leverages machine learning to estimate residential property prices in Bengaluru, India. It uses features such as location, total square feet area, number of bedrooms (BHK), and number of bathrooms to provide accurate predictions. This tool aids buyers, sellers, and real estate agents in making informed decisions. The project includes data preprocessing, model training using linear regression, and evaluation with K-Fold cross-validation.",
+  "image": "RealEstatePricePrediction.webp",
+  "category": "Machine Learning",
+  "technologies": ["Python", "Pandas", "NumPy", "Seaborn", "Matplotlib", "Scikit-learn", "Jupyter Notebook", "CSV"],
+  "githubLink": "https://github.com/harshgupta1810/realestate_price_pricticor",
+  "impact": "Facilitated accurate price predictions for residential properties, empowering stakeholders in Bengaluru’s real estate market.",
+  "results": [
+    "Accurate Price Predictions: Provided reliable estimates based on key property features.",
+    "Data Cleaning and Preprocessing: Ensured quality and usability of raw property data.",
+    "Model Optimization: Utilized hyperparameter tuning through grid search for improved performance.",
+    "User-Friendly Framework: Enabled straightforward prediction with the `predict_price` function."
+  ]
+},
+{
+  "id": 13,
+  "title": "Movie Recommender",
+  "description": "A machine learning project that recommends movies based on user input using the Support Vector Machine (SVM) algorithm.",
+  "longDescription": "The **Movie Recommender** project leverages the Support Vector Machine (SVM) algorithm to suggest similar movies based on user search input. Built with **Streamlit**, it offers an interactive web application where users can enter a movie name, and the system recommends similar titles based on the analysis of the input. The project provides details such as movie titles, genres, and ratings for the recommendations. Future improvements are planned to refine the algorithm and incorporate user feedback for personalized recommendations.",
+  "image": "MovieRecommender.webp",
+  "category": "Machine Learning",
+  "technologies": ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy"],
+  "githubLink": "https://github.com/harshgupta1810/Movie_recommender",
+  "impact": "Helped users discover similar movies based on their interests, enhancing the movie-watching experience through data-driven recommendations.",
+  "results": [
+    "Movie Search: Users can search for movies by title.",
+    "SVM-based Recommendations: The system generates movie suggestions based on the input movie using the SVM algorithm.",
+    "Recommendation Details: Displayed movie recommendations with relevant details like title, genre, and rating.",
+    "Interactive Frontend: Developed a user-friendly interface using Streamlit for seamless interaction."
+  ]
+},
 
 
 ]
