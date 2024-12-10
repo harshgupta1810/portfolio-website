@@ -306,7 +306,26 @@ const projects: Project[] = [
     "Automation: Automated tasks such as sending emails, changing wallpapers, and controlling volume, reducing manual efforts.",
     "Real-time Information: Integrated with APIs to provide live weather, news, and quotes, enhancing user experience with up-to-date data."
   ]
+},
+{
+  "id": 18,
+  "title": "SpamDetectX : Email Spam Classifier",
+  "description": "A machine learning-based email spam classifier that identifies and filters spam messages effectively.",
+  "longDescription": "SpamDetectX is an advanced email spam classifier that uses natural language processing (NLP) techniques and machine learning algorithms to distinguish between spam and non-spam (ham) messages. The project is designed to improve communication security and user experience by filtering unwanted spam messages. It evaluates various classifiers and provides performance metrics such as accuracy and precision for informed decision-making.",
+  "image": "/SpamDetectX.jpeg",
+  "category": "Machine Learning",
+  "technologies": ["Python", "scikit-learn", "nltk", "pandas", "numpy", "wordcloud", "xgboost"],
+  "githubLink": "https://github.com/harshgupta1810/email_spam",
+  "impact": "Enhanced email security by effectively classifying and filtering spam messages.",
+  "results": [
+    "Classifier Evaluation: Tested multiple algorithms such as Naive Bayes, SVM, Random Forest, and XGBoost to ensure optimal performance.",
+    "Feature Extraction: Implemented text preprocessing techniques including tokenization, stemming, and stopword removal for accurate classification.",
+    "High Accuracy: Achieved a reliable spam detection model with high precision and recall scores.",
+    "User-Friendly: Easy-to-use Python script for practical applications in spam filtering systems."
+  ]
 }
+
+
 
 
 ]
