@@ -228,7 +228,7 @@ const projects: Project[] = [
   "id": 13,
   "title": "Movie Recommender",
   "description": "A machine learning project that recommends movies based on user input using the Support Vector Machine (SVM) algorithm.",
-  "longDescription": "The **Movie Recommender** project leverages the Support Vector Machine (SVM) algorithm to suggest similar movies based on user search input. Built with **Streamlit**, it offers an interactive web application where users can enter a movie name, and the system recommends similar titles based on the analysis of the input. The project provides details such as movie titles, genres, and ratings for the recommendations. Future improvements are planned to refine the algorithm and incorporate user feedback for personalized recommendations.",
+  "longDescription": "The Movie Recommender project leverages the Support Vector Machine (SVM) algorithm to suggest similar movies based on user search input. Built with **Streamlit**, it offers an interactive web application where users can enter a movie name, and the system recommends similar titles based on the analysis of the input. The project provides details such as movie titles, genres, and ratings for the recommendations. Future improvements are planned to refine the algorithm and incorporate user feedback for personalized recommendations.",
   "image": "MovieRecommender.webp",
   "category": "Machine Learning",
   "technologies": ["Python", "Streamlit", "Scikit-learn", "Pandas", "NumPy"],
@@ -241,11 +241,27 @@ const projects: Project[] = [
     "Interactive Frontend: Developed a user-friendly interface using Streamlit for seamless interaction."
   ]
 },
+{
+  "id": 14,
+  "title": "Data Hiding using LSB Image Steganography",
+  "description": "A project that hides messages within images using the Least Significant Bit (LSB) steganography technique.",
+  "longDescription": "The Data Hiding using LSB Image Steganography** project demonstrates a method to conceal messages within images by manipulating the least significant bits of pixel values. This educational project is implemented in MATLAB and includes both encoding and decoding processes. The encoding embeds a user-provided message into a grayscale image, while the decoding retrieves the hidden message. This approach highlights the principles of image-based steganography.",
+  "image": "DataHidingLSB.webp",
+  "category": "Image Processing",
+  "technologies": ["MATLAB"],
+  "githubLink": "https://github.com/harshgupta1810/DATA_HIDING_USING_LSB_IMAGE_STEGANOGRAPHY-",
+  "impact": "Provided a practical example of steganography for educational purposes, showcasing how data can be hidden and retrieved within images.",
+  "results": [
+    "Encoding: Allowed users to embed a custom message into a grayscale image using LSB steganography.",
+    "Decoding: Successfully extracted hidden messages from stego images.",
+    "Visualization: Displayed the original cover image alongside the stego image for comparison."
+  ]
+},
 
 
 ]
 
-const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development","Deep Learning","Python","Data Analytics"]
+const categories = ["All", "Machine Learning", "Computer Vision", "NLP", "Game Development","Deep Learning","Python","Data Analytics","Image Processing"]
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All")
