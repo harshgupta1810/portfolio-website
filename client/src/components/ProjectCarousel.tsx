@@ -15,48 +15,49 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 
 const projects = [
   {
-    title: "ChartVantage",
-    description: "Automates detection and analysis of stock chart patterns for trading strategies.",
-    longDescription: "ChartVantage is an advanced AI-powered platform designed to revolutionize stock pattern analysis. By leveraging deep learning models, it automates the detection and analysis of stock chart patterns, offering traders real-time insights and actionable trading opportunities.",
-    image: "/ChartVantage.jpg",
-    githubLink: "https://github.com/harshgupta1810/ChartVantage.git",
-    technologies: ["Python", "TensorFlow", "OpenCV", "statsmodels"],
-    stats: "40% improvement in pattern detection accuracy",
+    title: "SmartCommodities : AI Based Commodity Price Predictor",
+    description: "A machine learning-based project that forecasts commodity prices using advanced algorithms.",
+    longDescription: "SmartCommodities is a project designed to predict commodity prices by leveraging advanced machine learning techniques. The project includes data collection, exploratory data analysis (EDA), model training, and performance evaluation. It provides insights into trends in commodity prices and applies various machine learning models for price forecasting, aiming to deliver accurate predictions and improve decision-making for traders and analysts.",
+    image: "/SmartCommodities.jpg",
+    githubLink: "https://github.com/harshgupta1810/commodity_price_prediction",
+    technologies: ["scikit-learn","Regression Models","Model Evaluation","Automation","Financial Data Analysis"],
+    stats: "Helps in predicting commodity prices using machine learning, providing valuable insights into market trends, and offering a tool for improving trading decisions and forecasting accuracy.",
     impact: [
-      "Improvement: Achieved a 40% increase in pattern detection accuracy.",
-      "Scalability: Processed over 1 million stock charts.",
-      "Efficiency: Reduced analysis time by 75%, enabling faster decision-making.",
-      "Impact: Enhanced trading accuracy, improving profitability for users"
+      "Data Collection: Automated scripts for gathering and preprocessing commodity price data from various sources.",
+      "Exploratory Data Analysis: Visualizations and statistical analyses uncovering insights and trends within the dataset.",
+      "Model Development: Applied various machine learning algorithms to predict commodity prices with high accuracy.",
+      "Performance Evaluation: Comprehensive metrics and visualizations to assess model performance and prediction accuracy."
     ]
   },
   {
-    title: "Predictive Maintenance",
-    description: "Machine learning model for equipment failure prediction",
-    longDescription: "A sophisticated predictive maintenance system that leverages machine learning to forecast potential equipment failures before they occur. The system analyzes real-time sensor data and historical maintenance records to prevent costly downtime.",
-    image: "https://via.placeholder.com/400x300",
-    githubLink: "https://github.com/yourusername/predictive-maintenance",
-    technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
-    stats: "35% reduction in equipment downtime",
-    impact: [
-      "Monitored 100+ industrial machines",
-      "Saved $500K in maintenance costs",
-      "Achieved 95% prediction accuracy"
+    "title": "Vigilant Sentinel: Intelligent Video Surveillance",
+    "description": "An intelligent video surveillance system for real-time anomaly detection in video streams.",
+    "longDescription": "Vigilant Sentinel is an AI-powered video surveillance system designed to detect abnormal events in real-time video streams. Leveraging neural networks and computer vision techniques, it processes live video to identify anomalies, providing an automated solution for enhanced security monitoring.",
+    "image": "/Vigilant Sentinel.jpg",
+    "githubLink": "https://github.com/harshgupta1810/Intelligent_video_surveillance",
+    "technologies": ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
+    "stats": "75% faster anomaly detection compared to traditional methods.",
+    "impact": [
+        "Accuracy: Achieved precise detection of anomalies with minimal false positives.",
+        "Efficiency: Reduced video analysis time by 50%, enabling real-time monitoring.",
+        "Scalability: Designed to handle various environments, from malls to streets.",
+        "Impact: Improved security monitoring through real-time anomaly detection."
     ]
   },
   {
-    title: "NLP Document Classifier",
-    description: "Automated document classification using NLP",
-    longDescription: "An intelligent document classification system powered by state-of-the-art Natural Language Processing. The system automatically categorizes documents based on their content, streamlining document management workflows.",
-    image: "https://via.placeholder.com/400x300",
-    githubLink: "https://github.com/yourusername/document-classifier",
-    technologies: ["Python", "BERT", "FastAPI", "PostgreSQL"],
-    stats: "95% classification accuracy",
-    impact: [
-      "Processed 1M+ documents",
-      "Reduced manual classification time by 90%",
-      "Improved accuracy by 25%"
+    "title": "Poetic Prowess: Poetry Generator",
+    "description": "Generate rap lyrics using AI-powered models.",
+    "longDescription": "An innovative poetry generator that uses Markov chains and LSTM neural networks to create rap lyrics. With a custom database of hip-hop artist lyrics, this tool combines machine learning and creativity to craft unique lines based on user prompts.",
+    "image": "/PoeticProwess.jpg",
+    "githubLink": "https://github.com/harshgupta1810/Poetry_Generator",
+    "technologies": ["Python", "Markov Chains", "LSTM", "Flask", "TensorFlow"],
+    "stats": "85% coherence score for generated lyrics",
+    "impact": [
+      "Generated 10,000+ lines of lyrics",
+      "Enabled artists to brainstorm creative ideas",
+      "Showcased AI's potential in creative fields"
     ]
-  },
+  }
 ]
 
 export function ProjectCarousel() {
