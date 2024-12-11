@@ -13,6 +13,8 @@ import { motion } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { useState } from "react"
 import { ScrollArea } from "@/components/ui/scroll-area"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 interface Project {
   id: number
@@ -42,10 +44,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
           transition={{ duration: 0.2 }}
           className="relative aspect-video"
         >
-          <img
+          <LazyLoadImage
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
+            effect="blur"
+            placeholder={
+              <div className="w-full h-full bg-muted animate-pulse" />
+            }
           />
           <Badge
             className="absolute top-4 right-4"
@@ -102,10 +108,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <DialogDescription>{project.description}</DialogDescription>
             </DialogHeader>
             <div className="space-y-4">
-              <img
+              <LazyLoadImage
                 src={project.image}
                 alt={project.title}
                 className="w-full h-64 object-cover rounded-lg"
+                effect="blur"
+                placeholder={
+                  <div className="w-full h-64 bg-muted animate-pulse rounded-lg" />
+                }
               />
               {project.longDescription && (
                 <div>
@@ -134,9 +144,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </div>
               <div className="flex justify-end gap-2">
                 <Button variant="outline" asChild>
-                  <a 
+                  <a
                     href={project.githubLink}
-                    target="_blank" 
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
