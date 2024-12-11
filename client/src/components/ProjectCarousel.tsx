@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github } from "lucide-react"
 import { motion } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { OptimizedImage } from "./OptimizedImage"
 
 const projects = [
   {
@@ -83,7 +84,7 @@ export function ProjectCarousel() {
                 <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border-primary/20">
                   <CardContent className="p-0">
                     <div className="relative group">
-                      <img
+                      <OptimizedImage
                         src={project.image}
                         alt={project.title}
                         className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
@@ -155,7 +156,7 @@ export function ProjectCarousel() {
                 <DialogDescription>{selectedProject.description}</DialogDescription>
               </DialogHeader>
               <div className="space-y-4">
-                <img
+                <OptimizedImage
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   className="w-full h-64 object-cover rounded-lg"
