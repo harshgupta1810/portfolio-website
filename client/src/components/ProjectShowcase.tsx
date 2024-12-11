@@ -4,16 +4,16 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
-    title: "Vigilant Sentinel: Intelligent Video Surveillance",
-    description: "An intelligent video surveillance system for real-time anomaly detection in video streams.",
-    impact: "75% faster anomaly detection compared to traditional methods.",
-    technologies: ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
+    title: "AI Video Analytics Platform",
+    description: "Real-time video processing system for security applications",
+    impact: "Improved threat detection accuracy by 40%",
+    technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
   },
   {
-    title: "Poetic Prowess: Poetry Generator",
-    description: "Generate rap lyrics using AI-powered models.",
-    impact: "85% coherence score for generated lyrics, empowering creative exploration.",
-    technologies: ["Python", "TensorFlow", "Markov Chains", "Flask", "LSTM"],
+    title: "Predictive Maintenance System",
+    description: "ML-based system for industrial equipment monitoring",
+    impact: "Reduced downtime by 35%",
+    technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
   },
 ]
 

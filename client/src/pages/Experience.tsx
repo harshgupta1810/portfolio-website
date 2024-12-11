@@ -119,4 +119,15 @@ const experiences = [
       "Led a team of 5 developers in implementing computer vision solutions",
     ],
   },
+  {
+    title: "Machine Learning Engineer",
+    company: "Tech Innovations Inc.",
+    duration: "Jan 2023 - June 2024",
+    technologies: ["Python", "Scikit-learn", "Docker", "Kubernetes", "GCP"],
+    achievements: [
+      "Developed predictive maintenance models achieving 95% accuracy",
+      "Implemented automated ML pipeline reducing deployment time by 60%",
+      "Collaborated with cross-functional teams to deliver AI solutions",
+    ],
+  },
 ]
