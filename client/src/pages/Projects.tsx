@@ -330,7 +330,7 @@ const projects: Project[] = [
   "description": "An AI-powered book recommendation system offering both popularity-based and collaborative filtering-based suggestions.",
   "longDescription": "Bookify is a Python-based book recommendation system that combines popularity-based and collaborative filtering-based approaches to suggest books. The popularity-based model recommends books based on their number of ratings and average ratings, while the collaborative filtering model uses user-item interaction data to suggest books similar to the input. This project aims to enhance the reading experience by helping users discover books tailored to their preferences.",
   "image": "/Bookify.jpeg",
-  "category": "Recommendation Systems",
+  "category": "Machine Learning",
   "technologies": ["Python", "NumPy", "Pandas", "scikit-learn", "Matplotlib", "Seaborn", "Jupyter Notebook"],
   "githubLink": "https://github.com/harshgupta1810/bookify",
   "impact": "Empowers users to find books that match their interests, fostering an engaging and personalized reading experience.",
@@ -340,10 +340,41 @@ const projects: Project[] = [
     "Scalable: The system can adapt to various datasets, making it versatile for different use cases.",
     "Easy Integration: The codebase is straightforward, enabling seamless adoption for personal or academic projects."
   ]
-}
-
-
-
+},
+{
+  "id": 20,
+  "title": "FinSent: Financial News Analyzer",
+  "description": "A Python-based tool that analyzes financial news articles to determine the sentiment towards stocks and visualize the distribution.",
+  "longDescription": "FinSent is a Python-based financial news analyzer that helps investors and traders analyze the sentiment of recent news articles related to a specific stock. It fetches news from Google News, performs sentiment analysis using the VADER sentiment analysis tool, and visualizes the sentiment distribution as a pie chart. The project aims to provide valuable insights into the market sentiment surrounding stocks by examining news trends.",
+  "image": "/FinSent.jpeg",
+  "category": "Machine Learning",
+  "technologies": ["Python", "pandas", "matplotlib", "nltk", "newspaper3k", "GoogleNews"],
+  "githubLink": "https://github.com/harshgupta1810/Fin_News_Analyzer-",
+  "impact": "Helps traders and investors stay informed by providing insights into the sentiment of news articles related to stocks, assisting in making data-driven decisions.",
+  "results": [
+    "Sentiment Analysis: Analyzes news articles to determine the sentiment towards a stock.",
+    "Visualization: Displays sentiment distribution as a pie chart for quick insights.",
+    "Customizable: Allows users to analyze any stock by entering its name or ticker symbol.",
+    "Easy Setup: The installation and usage instructions are simple, enabling quick adoption of the tool."
+  ]
+},
+{
+  "id": 21,
+  "title": "Beta Calculator",
+  "description": "A Python-based tool that calculates the beta coefficient of a stock relative to a benchmark index using linear regression.",
+  "longDescription": "The Beta Calculator is a Python-based tool designed to compute the beta coefficient of a given stock in relation to a benchmark index. Beta is a measure of a stock's sensitivity to market changes, helping investors assess systematic risk and volatility. The tool utilizes historical price data, calculates daily returns, and employs linear regression to determine the beta coefficient, aiding in portfolio risk management and investment decisions.",
+  "image": "/BetaCalculator.jpeg",
+  "category": "Machine Learning",
+  "technologies": ["Python", "pandas", "matplotlib", "numpy", "scikit-learn", "yfinance"],
+  "githubLink": "https://github.com/harshgupta1810/beta_stockmarket",
+  "impact": "Provides investors and financial analysts with a reliable tool to quantify stock risk and volatility in relation to market indices, facilitating data-driven investment strategies.",
+  "results": [
+    "Systematic Risk Assessment: Calculates beta to evaluate a stock's volatility relative to the market.",
+    "Data Visualization: Provides a visual representation of stock and index price trends.",
+    "Customizable Analysis: Works with any stock and benchmark index supported by Yahoo Finance.",
+    "Ease of Use: Simple installation and usage process with clear documentation."
+  ]
+},
 
 ]
 
