@@ -27,7 +27,7 @@ const projects: Project[] = [
     "longDescription": "SmartCommodities is a project designed to predict commodity prices by leveraging advanced machine learning techniques. The project includes data collection, exploratory data analysis (EDA), model training, and performance evaluation. It provides insights into trends in commodity prices and applies various machine learning models for price forecasting, aiming to deliver accurate predictions and improve decision-making for traders and analysts.",
     "image": "SmartCommodities.jpg",
     "category": "Deep Learning",
-    "technologies": ["Python", "Jupyter Notebook", "pandas", "numpy", "scikit-learn", "matplotlib", "seaborn","Regression Models","Model Evaluation","Automation","Financial Data Analysis"],
+    "technologies": ["pandas", "numpy", "scikit-learn", "matplotlib", "seaborn","Regression Models","Model Evaluation","Automation","Financial Data Analysis"],
     "githubLink": "https://github.com/harshgupta1810/commodity_price_prediction",
     "impact": "Helps in predicting commodity prices using machine learning, providing valuable insights into market trends, and offering a tool for improving trading decisions and forecasting accuracy.",
     "results": [

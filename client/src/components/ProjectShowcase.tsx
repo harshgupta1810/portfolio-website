@@ -4,16 +4,16 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
-    title: "AI Video Analytics Platform",
-    description: "Real-time video processing system for security applications",
-    impact: "Improved threat detection accuracy by 40%",
-    technologies: ["Python", "TensorFlow", "OpenCV", "AWS"],
+    title: "SmartCommodities : AI Based Commodity Price Predictor",
+    description: "A machine learning-based project that forecasts commodity prices using advanced algorithms.",
+    impact: "Helps in predicting commodity prices using machine learning, providing valuable insights into market trends, and offering a tool for improving trading decisions and forecasting accuracy.",
+    technologies: ["pandas", "numpy", "scikit-learn", "matplotlib","Regression Models","Model Evaluation","Automation",],
   },
   {
-    title: "Predictive Maintenance System",
-    description: "ML-based system for industrial equipment monitoring",
-    impact: "Reduced downtime by 35%",
-    technologies: ["Python", "Scikit-learn", "Docker", "MongoDB"],
+    title: "Vigilant Sentinel : intelligent video surveillance system",
+    description: "An intelligent video surveillance system for real-time anomaly detection in video streams.",
+    impact: "75% faster anomaly detection compared to traditional methods.",
+    technologies: ["Python", "Keras", "OpenCV", "NumPy", "Imutils"],
   },
 ]
 
