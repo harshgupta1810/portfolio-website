@@ -13,8 +13,19 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
     force: true
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@radix-ui/react-icons', '@radix-ui/react-slot', 'class-variance-authority', 'clsx', 'tailwind-merge'],
+        }
+      }
+    }
+  },
   server: {
     port: 5173,
-    strictPort: false // This allows Vite to try other ports if 5173 is in use
+    strictPort: false
   }
 })

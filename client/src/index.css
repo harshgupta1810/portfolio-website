@@ -116,3 +116,12 @@
 .hover-gradient {
   @apply hover:bg-gradient-to-r hover:from-primary hover:to-secondary transition-colors duration-300;
 }
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
